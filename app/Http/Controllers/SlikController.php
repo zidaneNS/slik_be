@@ -12,7 +12,7 @@ class SlikController extends Controller
      */
     public function index()
     {
-        $sliks = Slik::with('category')->get();
+        $sliks = Slik::with('category', 'form')->get();
         return response($sliks);
     }
 
