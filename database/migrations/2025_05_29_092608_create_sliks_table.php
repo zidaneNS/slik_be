@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignIdFor(Form::class);
             $table->foreignIdFor(Category::class);
+            $table->integer('number');
             $table->timestamps();
         });
     }

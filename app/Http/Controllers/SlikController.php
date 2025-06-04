@@ -23,12 +23,14 @@ class SlikController extends Controller
     {
         $validatedFields = $request->validate([
             'form_id' => 'required',
-            'category_id' => 'required'
+            'category_id' => 'required',
+            'number' => 'required'
         ]);
 
         $slik = Slik::create([
             'form_id' => $validatedFields['form_id'],
-            'category_id' => $validatedFields['category_id']
+            'category_id' => $validatedFields['category_id'],
+            'number' => $validatedFields['number']
         ]);
 
         return response($slik, 201);
@@ -49,12 +51,14 @@ class SlikController extends Controller
     {
         $validatedFields = $request->validate([
             'form_id' => 'required',
-            'category_id' => 'required'
+            'category_id' => 'required',
+            'number' => 'required'
         ]);
 
         $slik->update([
             'form_id' => $validatedFields['form_id'],
-            'category_id' => $validatedFields['category_id']
+            'category_id' => $validatedFields['category_id'],
+            'number' => $validatedFields['number']
         ]);
     }
 

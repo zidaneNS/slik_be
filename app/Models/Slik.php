@@ -9,7 +9,8 @@ class Slik extends Model
 {
     protected $fillable = [
         'form_id',
-        'category_id'
+        'category_id',
+        'number'
     ];
 
     public function form(): BelongsTo
